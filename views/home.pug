@@ -1,0 +1,86 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='css/style.css')
+  script(defer='' src='script/index.js')
+  title Free games for all of us
+header.header
+  img.logo(src='img/logo.png' alt='LOGO')
+  h1.heading-1.text-white pay less play more
+  h2.heading-2.text-white
+    span.game-number #{data.length} free games waiting for you
+  a.btn.text-white.btn-orange(href='#games') discover free games
+main
+  h3.heading-3.text-center.text-white sort by
+  .sort
+    .sort__category
+      a(class=".category" href="/") All
+      a(class=".category" href="/?category=mmorpg") mmorpg
+      a(class=".category" href="/?category=shooter") shooter
+      a(class=".category" href="/?category=strategy") strategy
+      a(class=".category" href="/?category=moba") moba
+      a(class=".category" href="/?category=racing") racing
+      a(class=".category" href="/?category=sports") sports
+      a(class=".category" href="/?category=sandbox") sandbox
+      a(class=".category" href="/?category=open-world") open-world
+      a(class=".category" href="/?category=survival") survival
+      a(class=".category" href="/?category=pvp") pvp
+      a(class=".category" href="/?category=pve") pve
+      a(class=".category" href="/?category=voxel") voxel
+      a(class=".category" href="/?category=zombie") zombie
+      a(class=".category" href="/?category=turn-based") turn-based
+      a(class=".category" href="/?category=first-person") first-person
+      a(class=".category" href="/?category=third-Person") third-Person
+      a(class=".category" href="/?category=top-down") top-down
+      a(class=".category" href="/?category=sailing") sailing
+      a(class=".category" href="/?category=side-scroller") side-scroller
+      a(class=".category" href="/?category=superhero") superhero
+      a(class=".category" href="/?category=permadeath") permadeath
+      a(class=".category" href="/?category=card") card
+      a(class=".category" href="/?category=battle-royale") battle-royale
+      a(class=".category" href="/?category=mmo") mmo
+      a(class=".category" href="/?category=mmofps") mmofps
+      a(class=".category" href="/?category=mmotps") mmotps
+      a(class=".category" href="/?category=3d") 3d
+      a(class=".category" href="/?category=2d") 2d
+      a(class=".category" href="/?category=fantasy") fantasy
+      a(class=".category" href="/?category=sci-fi") sci-fi
+      a(class=".category" href="/?category=fighting") fighting
+      a(class=".category" href="/?category=action-rpg") action-rpg
+      a(class=".category" href="/?category=action") action
+      a(class=".category" href="/?category=military") military
+      a(class=".category" href="/?category=martial-arts") martial-arts
+      a(class=".category" href="/?category=flight") flight
+      a(class=".category" href="/?category=low-spec") low-spec
+      a(class=".category" href="/?category=tower-defense") tower-defense
+      a(class=".category" href="/?category=horror") horror
+  #games.cards
+.popup
+  p.popup__close X
+
+div.cards
+  each val in data
+    div.card
+      div.card__front
+        div.card__img
+          - const img = val.thumbnail;
+          img(src=img)
+        div.card__info
+          h5.heading-5.text-white Platform = #{val.platform}
+          h5.heading-5.text-white Publisher = #{val.publisher}
+          h5.heading-5.text-white Developer = #{val.developer}
+          h5.heading-5.text-white Release Date = #{val.release_date}
+      div.card__back
+        h5.heading-5.text-white #{val.short_description}
+        h5.heading-5.text-white #{val.genre}
+        - const url = `/games/${val.id}`;
+        a(class="btn btn-white text-orange" href=url) Learn More
+        
+
+    
+
+    
+
+
