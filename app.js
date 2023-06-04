@@ -3,6 +3,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 import viewRouter from "./routes/view-routes.js";
 import { errorHandler } from "./middleware/error-handler.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const port = process.env.PORT || 3000;
 
