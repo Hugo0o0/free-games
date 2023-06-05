@@ -4,20 +4,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const apiGames = axios.create({
-  baseURL: "https://free-to-play-games-database.p.rapidapi.com/api/games",
-  headers: {
-    "X-RapidAPI-Key": process.env.API_KEY,
-    "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
-  },
+  baseURL: "https://www.freetogame.com/api/games",
   responseType: "json",
 });
 
 export const apiGame = axios.create({
-  baseURL: "https://free-to-play-games-database.p.rapidapi.com/api/game",
-  headers: {
-    "X-RapidAPI-Key": process.env.API_KEY,
-    "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
-  },
+  baseURL: "https://www.freetogame.com/api/game",
   responseType: "json",
 });
 

@@ -1,0 +1,17 @@
+mixin card(val)
+    div.card
+      div.card__front
+        div.card__img
+          - const img = val.thumbnail;
+          img(src=img)
+        div.card__info
+          h5.heading-5.text-white Name: #{val.title}
+          h5.heading-5.text-white Platform: #{val.platform}
+          h5.heading-5.text-white Publisher: #{val.publisher}
+          h5.heading-5.text-white Developer: #{val.developer}
+          h5.heading-5.text-white Release Date: #{val.release_date}
+      div.card__back
+        h5.heading-5.text-white #{val.short_description}
+        h5.heading-5.text-white #{val.genre}
+        - const url = `/games/${val.id}`;
+        a(class="btn btn-white text-orange" href=url) Learn More

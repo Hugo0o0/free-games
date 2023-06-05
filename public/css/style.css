@@ -193,6 +193,7 @@ dl {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 40rem));
   gap: 2rem;
+  row-gap: 8rem;
   justify-content: center;
 }
 
@@ -254,4 +255,14 @@ dl {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+}
+
+@media only screen and (max-width: 51.25em) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+  }
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }

@@ -24,5 +24,5 @@ app.use(viewRouter);
 app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log("Server listening");
+  console.log(`Server is running at ${port}`);
 });

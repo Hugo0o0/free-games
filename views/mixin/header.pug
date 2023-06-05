@@ -1,0 +1,16 @@
+mixin header(type)
+    if type =="error"
+        header.header
+            img.logo(src='/img/logo.png' alt='LOGO')
+            h1.heading-1.text-orange #{error.status}
+            h1.heading-1.text-white.text-center #{error.message}
+
+    else if type == "header"
+        header.header
+            img.logo(src='img/logo.png' alt='LOGO')
+            h1.heading-1.text-white pay less play more
+            h2.heading-2.text-white
+                span.game-number #{data.length} free games waiting for you
+            a.btn.text-white.btn-orange(href='#games') discover free games
+
+
