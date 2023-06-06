@@ -24,5 +24,5 @@ app.use(viewRouter);
 app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log(`Server is running at ${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });

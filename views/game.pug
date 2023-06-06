@@ -4,24 +4,13 @@ head
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='/css/style.css')
+  script(defer  src='/script/index.js')
   title Free games for all of us
 
-h1.text-white.heading-3.text-center=game.title
-div.image__container
-  each image in game.screenshots
-    img(src=image.image width=400, height=200)
-h5.heading-5.text-white.text-center Description #{game.description}
-h5.heading-5.text-white Genre: #{game.genre}
-h5.heading-5.text-white Platform: #{game.platform}
-h5.heading-5.text-white Publisher: #{game.publisher}
-h5.heading-5.text-white Developer: #{game.developer}
-h5.heading-5.text-white Release Date: #{game.release_date}
-if game.minimum_system_requirements
-  ul
-    br
-    li.heading-5.text-white System Requirements:
-    li.heading-5.text-white OS: #{game.minimum_system_requirements.os}
-    li.heading-5.text-white Processor: #{game.minimum_system_requirements.processor}
-    li.heading-5.text-white Memory: #{game.minimum_system_requirements.memory}
-    li.heading-5.text-white Graphics: #{game.minimum_system_requirements.graphics}
-    li.heading-5.text-white Storage: #{game.minimum_system_requirements.storage}
+
+include components/loading
+
+
+
+
+        

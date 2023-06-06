@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50rem;
+    height: 30rem;
+  }
+
+  &__next {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+  }
+
+  &__prev {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+  }
+}
