@@ -3,3 +3,12 @@
   background-color: #252525;
   padding: 5rem;
 }
+
+.sort {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

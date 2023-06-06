@@ -4,9 +4,21 @@ import tryCatch from "../utils/try-catch.js";
 export const homePage = tryCatch(async (req, res) => {
   const query = req.query;
 
-  const { data, request } = await apiGames.get(
-    query?.category ? `/?category=${query.category}` : "/"
-  );
+  let reqUrl = "";
+
+  const params = new URLSearchParams();
+
+  if (query.category) {
+    params.set("category", query.category);
+  }
+  if (query["sort-by"]) {
+    params.set("sort-by", query["sort-by"]);
+  }
+  if (query.platform) {
+    params.set("platform", query.platform);
+  }
+
+  const { data, request } = await apiGames.get(`/?${params.toString()}`);
 
   res.status(200).render("home", { data });
 });
@@ -17,4 +29,8 @@ export const gamePage = tryCatch(async (req, res, next) => {
   const { data } = await apiGame.get(`/?id=${id}`);
 
   res.status(200).render("game", { game: data });
+});
+
+export const loginPage = tryCatch((req, res, next) => {
+  res.status(200).render("login");
 });

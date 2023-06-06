@@ -13,7 +13,16 @@ mixin header(type)
             .header__container 
                 h1.heading-1.text-white.fw-100 pay less play more
                 h2.heading-2.text-white #{data.length} free games waiting for you
-                button.btn.btn-orange
-                    a(href='#games' class="text-white") discover free games
+                a(href='/#games' class="") 
+                    button.btn.btn-orange.text-white discover free games
 
+    else if type == "login"
+        header.header
+            a(href="/")
+                img.header__logo(src='/img/logo.png' alt='LOGO')
+            .login-container 
+               input(type="email" placeholder="Email" class="login-container__input")
+               input(type="password" placeholder="Password" class="login-container__input")
+               button(type="submit" class="btn btn-google")
+                <svg class="icon icon-google"><use xlink:href="#icon-google"></use></svg>
 

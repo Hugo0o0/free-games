@@ -10,6 +10,10 @@
   transition: transform 0.5s;
   box-shadow: 0 4rem 8rem black;
 }
+
+.btn-small {
+  padding: 1rem 2rem;
+}
 .btn::after {
   content: "";
   width: 100%;
@@ -38,4 +42,8 @@
 
 .btn-white {
   background-color: #fff;
+}
+
+.btn-google {
+  background-color: #ea4335;
 }

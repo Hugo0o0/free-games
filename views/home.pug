@@ -17,15 +17,26 @@ include components/loading
   
 
 main(id="games" class="main") 
-  h3.heading-3.text-center.text-white sort by
   .sort
     .sort__category
-      select(id="select")
-        option All
-        option mmorpg
-        option shooter
-        option strategy
-        option moba
+      select(id="options" data-type="category")
+        -const categories = ["all","mmorpg", "shooter", "strategy", "moba", "racing", "sports", "social", "sandbox", "open-world", "survival", "pvp", "pve", "pixel", "voxel", "zombie", "turn-based", "first-person", "third-Person", "top-down", "tank", "space", "sailing", "side-scroller", "superhero", "permadeath", "card", "battle-royale", "mmo", "mmofps", "mmotps", "3d", "2d", "anime", "fantasy", "sci-fi", "fighting", "action-rpg", "action", "military", "martial-arts", "flight", "low-spec", "tower-defense", "horror", "mmorts"];
+        each category in categories 
+          option=category
+
+    .sort__category
+      select(id="options" data-type="platform")
+        -const platforms = ["all","browser","pc"];
+        each platform in platforms 
+          option=platform
+    
+    .sort__category
+      select(id="options" data-type="sort-by")
+        -const sortOptions = ["release-date","popularity","alphabetical","relevance"];
+        each option in sortOptions 
+          option=option
+    button.btn.btn-small(id="apply-filter") Apply
+
   .cards
     each val in data
       +card(val)

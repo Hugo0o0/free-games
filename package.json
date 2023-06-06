@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
-    "start": "nodemon app.js",
-    "build": "esbuild app.js --bundle --platform=node --packages=external --format=esm --outfile=build/app.js"
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
