@@ -5,7 +5,7 @@ const applyFilterBtn = document.querySelector("#apply-filter");
 const url = new URL(window.location.href);
 const searchParam = new URLSearchParams(url);
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
   modal.remove();
 
   const params = new URL(document.location).searchParams;
@@ -34,8 +34,12 @@ selectOptions.forEach((option) => {
   option.addEventListener("change", (e) => {
     const { type } = option.dataset;
 
-    if (type === "category" && e.target.value !== "all") {
-      searchParam.set("category", e.target.value);
+    if (type === "category") {
+      if (e.target.value === "all") {
+        searchParam.delete("category");
+      } else {
+        searchParam.set("category", e.target.value);
+      }
     }
 
     if (type === "platform") {

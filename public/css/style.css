@@ -39,7 +39,7 @@
   text-transform: capitalize; }
 
 .text-white {
-  color: #fff !important; }
+  color: #eaeaea !important; }
 
 .text-center {
   text-align: center; }
@@ -245,23 +245,13 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center; }
-
-.container {
-  position: relative; }
-  .container__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50rem;
-    height: 30rem; }
-  .container__next {
-    position: absolute;
-    top: 50%;
-    right: 2rem; }
-  .container__prev {
-    position: absolute;
-    top: 50%;
-    left: 2rem; }
+  @media only screen and (max-width: 26.5625em) {
+    .sort {
+      flex-direction: column; } }
+  .sort__category {
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+    padding: 1rem 2rem; }
 
 .login-container {
   width: 50rem;

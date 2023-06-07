@@ -11,4 +11,14 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  &__category {
+    font-family: $ff-montserrat;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+  }
 }

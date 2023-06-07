@@ -7,7 +7,7 @@ head
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet' href='css/style.css')
-  script(defer  src='/script/index.js' type="module")
+  script(defer  src='/script/index.js')
   title Free games for all of us
 +header("header")
 main
@@ -18,23 +18,23 @@ include components/loading
 
 main(id="games" class="main") 
   .sort
-    .sort__category
-      select(id="options" data-type="category")
+    
+    select.sort__category(id="options" data-type="category")
         -const categories = ["all","mmorpg", "shooter", "strategy", "moba", "racing", "sports", "social", "sandbox", "open-world", "survival", "pvp", "pve", "pixel", "voxel", "zombie", "turn-based", "first-person", "third-Person", "top-down", "tank", "space", "sailing", "side-scroller", "superhero", "permadeath", "card", "battle-royale", "mmo", "mmofps", "mmotps", "3d", "2d", "anime", "fantasy", "sci-fi", "fighting", "action-rpg", "action", "military", "martial-arts", "flight", "low-spec", "tower-defense", "horror", "mmorts"];
         each category in categories 
           option=category
 
-    .sort__category
-      select(id="options" data-type="platform")
+    
+    select.sort__category(id="options" data-type="platform")
         -const platforms = ["all","browser","pc"];
         each platform in platforms 
           option=platform
     
-    .sort__category
-      select(id="options" data-type="sort-by")
-        -const sortOptions = ["release-date","popularity","alphabetical","relevance"];
-        each option in sortOptions 
-          option=option
+    
+    select.sort__category(id="options" data-type="sort-by")
+      -const sortOptions = ["release-date","popularity","alphabetical","relevance"];
+      each option in sortOptions 
+        option=option
     button.btn.btn-small(id="apply-filter") Apply
 
   .cards

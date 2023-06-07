@@ -26,3 +26,9 @@ mixin header(type)
                button(type="submit" class="btn btn-google")
                 <svg class="icon icon-google"><use xlink:href="#icon-google"></use></svg>
 
+    else if type == "game"
+        header.header
+            a(href="/")
+                img.header__logo(src='/img/logo.png' alt='LOGO')
+            
+
