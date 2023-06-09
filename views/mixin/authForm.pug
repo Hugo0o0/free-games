@@ -1,0 +1,33 @@
+mixin authForm(type)
+    if type == "login"
+        .login-main
+            .login-main__background 
+            .login-main__form
+                h1.heading-2.fw-500.text-center Login
+                .input-group
+                    label.input-group--label(for="username") Username Or Password
+                    input.input-group--input(type="text" id="username")
+                
+                .input-group
+                    label.input-group--label(for="password") Password
+                    input.input-group--input(type="passw" id="password"  )
+
+                button.btn.btn-orange.text-white.btn-small Signup
+    else if type == "signup"
+        .login-main
+            .login-main__background 
+            .login-main__form
+                h1.heading-2.fw-500.text-center Registration
+                .input-group
+                    label.input-group--label(for="email") Email
+                    input.input-group--input(type="email" id="email")
+
+                .input-group
+                    label.input-group--label(for="username") Username
+                    input.input-group--input(type="text" id="username")
+                
+                .input-group
+                    label.input-group--label(for="password") Password
+                    input.input-group--input(type="passw" id="password"  )
+
+                button.btn.btn-orange.text-white.btn-small Signup

@@ -1,6 +1,8 @@
+include mixin/header
 include mixin/authForm
 
 
+doctype html
 head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
@@ -9,11 +11,6 @@ head
   script(defer  src='/script/index.js')
   title Free games for all of us
 
-
 include components/loading
 
-
-+authForm("login")
-
-
-
++authForm("signup")

@@ -34,3 +34,7 @@ export const gamePage = tryCatch(async (req, res, next) => {
 export const loginPage = tryCatch((req, res, next) => {
   res.status(200).render("login");
 });
+
+export const signupPage = tryCatch((req, res, next) => {
+  res.status(200).render("signup");
+});
